@@ -2,11 +2,8 @@ from pymongo import MongoClient
 import os
 import redis
 
-MONGOUSER = os.environ.get('MONGOUSER')
-MONGOPASS = os.environ.get('MONGOPASS')
+
 MONGOURL = os.environ.get('MONGOURL')
-MONGOAPP = os.environ.get('MONGOAPP')
-MONGOURL = "mongodb://{}:{}@{}/{}".format(MONGOUSER, MONGOPASS, MONGOURL, MONGOAPP)
 
 client = MongoClient(MONGOURL)
 db = client[MONGOAPP]
