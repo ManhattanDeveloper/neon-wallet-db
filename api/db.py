@@ -4,6 +4,7 @@ import redis
 
 
 MONGOURL = os.environ.get('MONGOURL')
+MONGOAPP = os.environ.get('MONGODB')
 
 client = MongoClient(MONGOURL)
 db = client[MONGOAPP]
